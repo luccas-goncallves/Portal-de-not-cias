@@ -1,3 +1,27 @@
+section header {
+
+  border-top: 1px solid var(--stroke-color);
+  padding-block: 12px 24px;
+  font: var(--text);
+
+  a {
+    justify-self: end;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      background-image: url(../assets/ArrowRight.svg);
+      width: 16px;
+      height: 16px;
+    }
+    
+    &:hover span{
+      background-image: url(../assets/icons/ArrowRight-hover.svg);
+    }
+    
+  }
+}
+  
 #featured {
   img {
     height: 100%;
@@ -21,6 +45,7 @@
         #020617 100%
       );
     }
+
     figcaption {
       position: absolute;
       bottom: 0;
@@ -33,19 +58,39 @@
       h2 {
         margin-top: 8px;
       }
-
     }
   }
-}
 
-.content-tag {
-  display: inline-block;
-  background-color: var(--brand-color-dark);
-  border-radius: 4px;
-  padding: 4px 8px;
-  font: 500 10px/1.2 var(--font-family);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--text-color-primary);
-  box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
-}
+  }
+
+#weekly {
+    
+    &>div {
+  
+      grid-template-columns: repeat(4, 292px);
+  
+    }
+
+    img {
+      height: 160px;
+    }
+
+    figure {
+      position: relative;
+
+      .content-tag {
+        position:absolute;
+        top: 8px;
+        left: 8px;
+      }
+
+    }
+
+    p {
+      margin-top: 8px;
+      font-weight: 800;
+    }
+  }
+  
+
+
